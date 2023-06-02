@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>9-В</title>
+    <link rel="icon" href="/media/icon_9.png">
+    <script src="{% static 'js/students.js' %}"></script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .topbar {
+            height: 120px;
+            width: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 3px solid black;
+            padding: 10px;
+        }
+
+        .topbar::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../../media/school.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(2px); /* Применяем размытие */
+        }
+
+        .topbar-logo {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .topbar-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .topbar-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .topbar-menu a:hover {
+            text-decoration: underline;
+        }
+
+        .rectangle {
+            width: auto;
+            height: 200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
+            color: black;
+            position: relative;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin: 50px auto;
+        }
+
+        .button {
+            width: 400px;
+            height: 80px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0);
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+            border: 2px solid black;
+        }
+
+        .button:hover {
+            background-image: ;
+        }
+    </style>
+</head>
+<body>
+<div class="topbar">
+    <div class="topbar-logo">
+        <h1 style="color: black; position: relative; left: 180%">9-"В"</h1>
+        <img style="left: 50%; border: 2px solid black; opacity: 100; height: 100px; width: 100px; position: relative;" src="/media/icon_9.png" alt="Profile Picture">
+    </div>
+    <div class="topbar-menu">
+
+    </div>
+</div>
+
+<div class="rectangle">
+    <h2>Добро пожаловать на нашу уютную онлайн площадку, посвященную нашему классу! Здесь вы найдете веселые моменты, красочные фотографии и интересные истории, отражающие нашу неповторимую атмосферу. Мы - сплоченная команда учеников, готовых делиться своими успехами и радостью. Погрузитесь в мир наших приключений, узнайте больше о нашей команде и поддерживайте нас в нашем путешествии образования и развития. Присоединяйтесь к нам и станьте частью нашей истории! </h2>
+        <div class="button-container">
+        <a href="/students/"><button class="button">Ученики</button></a>
+        <button class="button">Картины</button>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Создатели:</h1>
+<div style="position: relative; display: inline-flex; flex-direction: row; overflow: auto; width: auto; top: 15px; left: 80px; object-fit: cover; flex-wrap: wrap;">
+    <div style="padding-right: 10px; margin: 10px; margin-left: 0px; width: 333.48px" onclick="window.location.href='/student/1/'">
+        <center> <img style="border: 2px;"  src="/media/hello.png" alt="Картинка 1" style="object-fit: cover; padding-right: 50px; padding-top: 50px"> </center>
+        <center><h1>Муминов Шохжахон</h1></center>
+    </div>
+</div>
+
+</body>
+</html>

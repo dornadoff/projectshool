@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Боковая панель с анимацией</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/students.css' %}">
+    <script src="{% static 'js/students.js' %}"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+            }
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="topbar-logo">
+            <h1 style="color: black; position: relative; left: 180%">9-"В"</h1>
+            <img style="left: 50%; border: 2px solid black; opacity: 100; height: 100px; width: 100px; position: relative;" src="/media/icon_9.png" alt="Profile Picture">
+        </div>
+        <div class="topbar-menu">
+
+        </div>
+    </div>
+
+    <a href="/"> <button class="open-btn" style="border: 2px solid black; width: 100px; border-radius: 10px;">&#x21e6;</button> </a>
+	<div style="position: relative; display: inline-flex; flex-direction: row; overflow: auto; width: auto; top: 15px; left: 80px; object-fit: cover; flex-wrap: wrap;">
+        {% for i in student %}
+        <div style="padding-right: 10px; margin: 10px; margin-left: 0px; width: 333.48px" onclick="window.location.href='/student/{{i.id}}'">
+			<center> <img style="border: 2px;"  src="{{ i.icon.url }}" alt="Картинка 1" style="object-fit: cover; padding-right: 50px; padding-top: 50px"> </center>
+			<center><h1>{{i.full_name}}</h1></center>
+		</div>
+        {% endfor %}
+	  </div>
+
+
+
+</body>
+</html>
